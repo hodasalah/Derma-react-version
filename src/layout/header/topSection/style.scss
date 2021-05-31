@@ -1,0 +1,19 @@
+@import "../../../design/scss-variables";
+.top_section {
+	padding: 3rem 0;
+	background-color: $white-color;
+	width: 100%;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		& > figure {
+			max-width: 12rem;
+			margin-right: 2rem;
+		}
+		@media only screen and (max-width: 400px) {
+			flex-wrap: wrap;
+		}
+	}
+}

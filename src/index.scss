@@ -1,0 +1,134 @@
+@import "./design/scss-variables";
+
+@font-face {
+	font-family: "fr-dem";
+	src: url(./assets/fonts/fradm.ttf);
+}
+@font-face {
+	font-family: "fr-book";
+	src: url(./assets/fonts/franklin-gothic-book.ttf);
+}
+@font-face {
+	font-family: "fr-med";
+	src: url(./assets/fonts/Franklin-Gothic-Medium.ttf);
+}
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+html {
+	font-size: 10px;
+	::selection {
+		background-color: $purple-color;
+		color: $white-color;
+	}
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+body {
+	box-sizing: border-box;
+	font-family: "fr-book";
+	font-size: $p-size;
+	font-weight: 400;
+	line-height: 1.5;
+	color: $black-text;
+	position: relative;
+
+	background-color: $white-color;
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: $light-grey;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 0px;
+		background-color: $light-blue;
+	}
+}
+// global
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul {
+	list-style: none;
+}
+nav li a {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 400;
+	&:active {
+		font-weight: 600;
+	}
+}
+// classes
+.wrapper {
+	max-width: $layout-width;
+	margin: 0 auto;
+	height: 100%;
+	padding: 0 1.5rem;
+	@media only screen and (max-width: 780px) {
+		max-width: 100%;
+		text-align: center;
+	}
+}
+
+.grey-bg {
+	background-color: $light-grey;
+}
+.light_grey-bg {
+	background-color: $lighten-grey;
+}
+.blue-bg {
+	background-color: $light-blue;
+	color: $white-color;
+}
+.heading {
+	font-family: "fr-med";
+	line-height: 1;
+	font-weight: 400;
+	&_big {
+		font-size: $heading-size;
+	}
+	&_small {
+		font-size: $sub-heading-size;
+	}
+	&_white {
+		color: $white-color;
+	}
+	&_blue {
+		color: $light-blue;
+	}
+}
+.p {
+	font-family: "fr-book";
+	&_big {
+		font-size: $text-size;
+	}
+}
+.link {
+	font-family: "fr-dem";
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: $purple-color;
+	display: inline-block;
+}
+.btn {
+	color: $white-color;
+	background-color: $purple-color;
+	border-radius: 100px;
+	display: inline-block;
+	text-align: center;
+	padding: 1rem 2.8rem;
+	font-size: 2rem;
+	font-family: "fr-dem";
+	font-weight: lighter;
+}
