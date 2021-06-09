@@ -5,8 +5,7 @@ import icon2 from "../../assets/images/feat-icon-2.png";
 import icon3 from "../../assets/images/feat-icon-3.png";
 import "./style.scss";
 
-const Features = (props) => {
-	console.log(props);
+const Features = () => {
 	return (
 		<section className="section_feat">
 			<div className="wrapper">

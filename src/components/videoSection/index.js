@@ -3,7 +3,7 @@ import Video from "./video";
 import "./style.scss";
 import Button from "./Button";
 
-const VideoSec = () => {
+const VideoSec = ({ show, openModal, closeModal }) => {
 	return (
 		<section className="section_video light_grey-bg">
 			<div className="wrapper">
@@ -33,7 +33,11 @@ const VideoSec = () => {
 						<small>Duration: 2:43</small>
 					</p>
 				</article>
-				<Video />
+				<Video
+					open={show["video"]}
+					closeModal={()=>closeModal("video")}
+					click={() => openModal("video")}
+				/>
 			</div>
 		</section>
 	);

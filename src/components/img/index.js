@@ -4,7 +4,7 @@ import "./style.scss";
 const Img = (props) => {
 	return (
 		<figure>
-			<img src={props.source} alt={props.name} />
+			<img src={props.source} alt={props.name} onClick={props.clickImg} />
 		</figure>
 	);
 };

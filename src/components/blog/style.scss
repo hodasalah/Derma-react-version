@@ -8,9 +8,7 @@
 			minmax(calc(260px - 2rem), 1fr)
 		);
 		gap: 2rem;
-		@media only screen and (max-width: 534px) {
-			justify-items: center;
-		}
+
 		.box {
 			max-width: 40rem;
 			margin: 3rem 0;
@@ -28,6 +26,14 @@
 				padding: 2rem;
 				.p {
 					margin: 2rem 0;
+				}
+			}
+		}
+		@media only screen and (max-width: 780px) {
+			justify-items: center;
+			.box {
+				&_info {
+					padding: 2rem 1rem;
 				}
 			}
 		}

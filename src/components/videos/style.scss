@@ -23,6 +23,7 @@
 			justify-items: center;
 			align-items: center;
 			&_img {
+				overflow: hidden;
 				img {
 					display: block;
 					width: 100%;
@@ -30,6 +31,7 @@
 				}
 			}
 			&_info {
+				padding: 0 1rem;
 				h3 {
 					color: $light-blue;
 					font-family: "fr-dem";
@@ -39,9 +41,6 @@
 			@media only screen and (max-width: 800px) {
 				&_info {
 					text-align: center;
-					p {
-						max-width: 94%;
-					}
 				}
 			}
 		}

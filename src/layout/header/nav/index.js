@@ -1,5 +1,7 @@
 import React from "react";
+import Backdrop from "../../../components/UI/backdrop";
 import List from "./List";
+
 import "./style.scss";
 
 const Nav = (props) => {
@@ -34,17 +36,28 @@ const Nav = (props) => {
 	];
 
 	return (
-		<nav className={props.isOpen ? "close" : "active"}>
-			<ul className="nav_first">
-				<List arr={firstUL} />
-			</ul>
-			<ul className="nav_sec grey-bg">
-				<List arr={SecUL} />
-			</ul>
-			<ul className="nav_third blue-bg">
-				<List arr={thirdUL} />
-			</ul>
-		</nav>
+		<>
+			<Backdrop show={props.open} />,
+			<nav className={[props.open ? "active" : "close"]}>
+				{props.open ? (
+					<button
+						onClick={() => props.closeHandelar(false)}
+						className="btnClose"
+					>
+						X
+					</button>
+				) : null}
+				<ul className="nav_first">
+					<List arr={firstUL} />
+				</ul>
+				<ul className="nav_sec grey-bg">
+					<List arr={SecUL} />
+				</ul>
+				<ul className="nav_third blue-bg">
+					<List arr={thirdUL} />
+				</ul>
+			</nav>
+		</>
 	);
 };
 

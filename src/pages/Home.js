@@ -7,18 +7,20 @@ import VideoSec from "../components/videoSection";
 import Blog from "../components/blog";
 import Videos from "../components/videos";
 import Reference from "../components/reference";
+import ScrollButton from "../components/UI/scrollButton";
 
-const Home = () => {
+const Home = ({ open, show, hide }) => {
 	return (
 		<Layout>
 			<main>
 				<Hero />
 				<About />
 				<Features />
-				<VideoSec />
+				<VideoSec show={open} closeModal={hide} openModal={show} />
 				<Blog />
-				<Videos />
+				<Videos show={open} closeModal={hide} openModal={show} />
 				<Reference />
+				<ScrollButton />
 			</main>
 		</Layout>
 	);

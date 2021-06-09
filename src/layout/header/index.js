@@ -4,14 +4,13 @@ import MobBtn from "../../components/mobileBtn";
 import Nav from "./nav";
 
 const Header = (props) => {
-	const [isOpen, setIsOpen] = useState(false);
-
+	const [showNav, setShowHandelar] = useState(false);
 	return (
 		<header>
 			<TopSection>
-				<MobBtn click={() => setIsOpen(!isOpen)} />
+				<MobBtn click={() => setShowHandelar(true)} />
 			</TopSection>
-			<Nav isOpen={isOpen} />
+			<Nav open={showNav} closeHandelar={setShowHandelar} />
 		</header>
 	);
 };
