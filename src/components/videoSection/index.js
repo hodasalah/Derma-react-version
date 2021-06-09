@@ -28,14 +28,17 @@ const VideoSec = ({ show, openModal, closeModal }) => {
 						<li>— Reducing epidermal thickness</li>
 					</ul>
 
-					<Button value="Watch the video" />
+					<Button
+						value="Watch the video"
+						click={() => openModal("video")}
+					/>
 					<p className="p">
 						<small>Duration: 2:43</small>
 					</p>
 				</article>
 				<Video
 					open={show["video"]}
-					closeModal={()=>closeModal("video")}
+					closeModal={() => closeModal("video")}
 					click={() => openModal("video")}
 				/>
 			</div>
