@@ -51,8 +51,14 @@ const Nav = (props) => {
 	const [show, setShow] = useState(false);
 
 	const click = (item) => {
+		if (item === SecUL.id) {
+			setIsActive(true);
+		} else {
+			setIsActive(false);
+		}
+		setShow(false);
 		setItem(item);
-		setIsActive(true);
+		setSubItem(item);
 	};
 	const showThird = (it) => {
 		setSubItem(it);
@@ -84,7 +90,7 @@ const Nav = (props) => {
 						</li>
 					))}
 				</ul>
-				{isActive && item === SecUL.id && (
+				{isActive && (
 					<ul className="nav_sec grey-bg">
 						{SecUL.items.map((el) => (
 							<li key={el}>
@@ -100,17 +106,21 @@ const Nav = (props) => {
 					</ul>
 				)}
 
-				{show && item === SecUL.id ? (
-					<ul className="nav_third blue-bg">
-						{thirdUL.items.map((li) => (
-							<li key={li}>
-								<NavLink to={`/${item}/${subItem}/${li}`}>
-									{li}
-								</NavLink>
-							</li>
-						))}
-					</ul>
-				) : null}
+				{(show
+					&& item ===
+					  SecUL.id)&&(
+							<ul className="nav_third blue-bg">
+								{thirdUL.items.map((li) => (
+									<li key={li}>
+										<NavLink
+											to={`/${item}/${subItem}/${li}`}
+										>
+											{li}
+										</NavLink>
+									</li>
+								))}
+							</ul>
+					  )}
 			</nav>
 		</>
 	);
