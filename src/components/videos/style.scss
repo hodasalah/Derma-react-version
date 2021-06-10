@@ -31,7 +31,6 @@
 				}
 			}
 			&_info {
-				padding: 0 1rem;
 				h3 {
 					color: $light-blue;
 					font-family: "fr-dem";
@@ -41,6 +40,7 @@
 			@media only screen and (max-width: 800px) {
 				&_info {
 					text-align: center;
+					padding: 0 1rem;
 				}
 			}
 		}
